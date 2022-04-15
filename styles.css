@@ -1,0 +1,99 @@
+:root {
+    --orange: orange;
+    --white: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-size: 15px;
+    font-family: "Myriad Pro";
+    font-weight: normal;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    position: relative;
+    color: #fff;
+}
+header span {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: var(--orange);
+}
+header .content {
+    padding: 0 3rem;
+    position: relative;
+}
+header h1 {
+    font-size: 13rem;
+    font-weight: bold;
+    letter-spacing: -0.5rem;
+}
+header .nav {
+    height: 650px;
+}
+header .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+header h2 {
+    font-size: 4rem;
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    line-height: 0.8;
+    padding: 4rem 0;
+}
+header nav ul {
+    display: flex;
+    gap: 2rem;
+}
+header a {
+    text-transform: capitalize;
+    color: var(--orange);
+    font-size: 1.2rem;
+    display: inline-block;
+    line-height: 1.2;
+    padding: 2rem 0 0.5rem 0;
+    position: relative;
+    transition: all 0.3s;
+}
+header a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    transition: all .3s;
+    opacity: 0;
+}
+header a:hover {
+    color: var(--white);
+}
+header a:hover::after {
+    opacity: 1;
+}
+header p::first-letter, header h1::first-letter {
+    color: var(--orange);
+}
+
