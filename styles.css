@@ -28,11 +28,12 @@ body > .bg {
     max-width: 1200px;
     margin: 0 auto;
 }
-.bg_color {
+main .wrapper {
     background-color: var(--white);
 }
 h1::first-letter, h2::first-letter {
     color: var(--orange);
+    text-transform: capitalize;
 }
 h1 {
     font-size: 13rem;
@@ -47,7 +48,7 @@ h2 {
     padding: 4rem 0;
 }
 
-/* header */
+/* ----------header---------- */
 
 header {
     position: relative;
@@ -83,9 +84,14 @@ header a {
     font-size: 1.2rem;
     display: inline-block;
     line-height: 1.2;
-    padding: 2rem 0 0.5rem 0;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
     position: relative;
     transition: all 0.3s;
+}
+header a:target {
+    background-color: red;
+    color: lime;
 }
 header a:after {
     content: "";
@@ -109,7 +115,7 @@ header p::first-letter, header h1::first-letter {
     color: var(--orange);
 }
 
-/* main */
+/* ----------main---------- */
 
 /* about */
 .about > .wrapper {
@@ -186,4 +192,85 @@ header p::first-letter, header h1::first-letter {
     font-style: italic;
     font-size: 0.5rem;
     color: var(--gray);
+}
+
+/* featured */
+.featured h2 {
+    padding-bottom: 0;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    line-height: 1.3;
+    letter-spacing: -0.1rem;
+}
+.featured h2:after {
+    content: "";
+    width: 55%;
+    height: 0.2rem;
+    background-color: var(--lightGray);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.featured nav {
+    padding: 0 3rem;
+}
+.featured nav > ul {
+    display: flex;
+    margin: 1.5rem 0;
+    gap: 1.5rem
+}
+.featured nav ul li {
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+.featured nav ul .underline {
+    position: relative;
+}
+.featured nav ul .underline:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 0.2rem;
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: underline linear 0.5s;
+}
+@keyframes underline {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 75%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+.featured .gallary {
+    display: none;
+}
+.featured .gallary > div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.featured .gallary img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    transition: all 0.2s;
+}
+.featured .gallary img:hover {
+    border: 5px solid black;
+    transform: scale(1.2) rotate(5deg);
+}
+.featured .gallary_visible {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
