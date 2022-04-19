@@ -17,6 +17,7 @@ body {
     font-family: "Myriad Pro";
     font-weight: normal;
     position: relative;
+    background-color: var(--black);
 }
 body > .bg {
     width: 100%;
@@ -47,7 +48,9 @@ h2 {
     line-height: 0.8;
     padding: 4rem 0;
 }
-
+p {
+    margin-top: 1.5rem;
+}
 /* ----------header---------- */
 
 header {
@@ -158,22 +161,19 @@ header p::first-letter, header h1::first-letter {
 .about > .wrapper > .subtitle p {
     color: var(--gray);
 }
-.about p {
-    padding: 0.5rem 0;
-}
-.card_container {
+.about .card_container {
     grid-column: 1/3;
     display: flex;
     justify-content: space-around;
 }
-.card {
+.about .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3rem;
     margin: 3rem;
 }
-.card .icon {
+.about .card .icon {
     display: flex;
     align-items: center;
     justify-content: center;;
@@ -183,11 +183,11 @@ header p::first-letter, header h1::first-letter {
     border: 0.2rem solid var(--orange);
     border-radius: 50%;
 }
-.card h3 {
+.about .card h3 {
     margin: 1rem 0;
     text-transform: capitalize;
 }
-.card p {
+.about .card p {
     text-align: center;
     font-style: italic;
     font-size: 0.5rem;
@@ -206,7 +206,7 @@ header p::first-letter, header h1::first-letter {
 .featured h2:after {
     content: "";
     width: 55%;
-    height: 0.2rem;
+    height: 0.1rem;
     background-color: var(--lightGray);
     position: absolute;
     right: 0;
@@ -258,6 +258,11 @@ header p::first-letter, header h1::first-letter {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightcyan;
+    font-size: 4rem;
 }
 .featured .gallary img {
     width: 100%;
@@ -272,5 +277,66 @@ header p::first-letter, header h1::first-letter {
 }
 .featured .gallary_visible {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+}
+
+/* strategic */
+.strategic .wrapper {
+    padding: 2rem 4rem;
+}
+.strategic h2 {
+    font-weight: normal;
+    padding: 1rem 0;
+    position: relative;
+    display: inline-block;
+}
+.strategic h2:after {
+    content: "";
+    width: 55%;
+    height: 0.1rem;
+    background-color: var(--lightGray);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.strategic .card_container {
+    padding: 3rem 6rem;
+}
+.strategic .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 290px;
+}
+/* .strategic .card:nth-child(2n) {
+    flex-direction: row-reverse;
+    background-color: red;
+} */
+.strategic .card:nth-child(2n) div {
+    background-color: red;
+}
+.strategic .card > div:nth-child(2) {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.strategic .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.strategic .card h3 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.strategic .card p {
+    text-align: start;
+    color: var(--gray);
+}
+.strategic .card p:nth-of-type(1) {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--black);
 }
