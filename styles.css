@@ -308,12 +308,9 @@ header p::first-letter, header h1::first-letter {
     grid-template-columns: repeat(2, 1fr);
     min-height: 290px;
 }
-/* .strategic .card:nth-child(2n) {
-    flex-direction: row-reverse;
-    background-color: red;
-} */
-.strategic .card:nth-child(2n) div {
-    background-color: red;
+.strategic .card:nth-child(2n) div:last-child {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 .strategic .card > div:nth-child(2) {
     padding: 2rem;
