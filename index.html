@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./fonts.css">
+    <script src="./scripts.js"></script>
 </head>
 <body>
     <img class="bg" src="./img/Layer 6.png" alt="Background image">
@@ -293,13 +294,15 @@
                 </div>
                 <div class="content">
                     <h2>contact us</h2>
-                    <form action="">
+
+                    <form action="" id="formContact">
                         <input type="text" placeholder="your name">
                         <input type="tel" placeholder="mobile">
                         <input type="email" placeholder="email">
                         <textarea name="textarea" id="textarea" cols="30" rows="4" placeholder="massage"></textarea>
-                        <button type="submit">sent</button>
+                        <input type="submit" value="SEND">
                     </form>
+
                     <h3>location map</h3>
                     <p>address<a href="#">Hill Mist garden, Pune, 411 048. India</a></p>
                     <p>phone<a href="tel:+91 12534 67890">+91 12534 67890</a></p>
@@ -332,7 +335,11 @@
                             </svg>
                         </a>
                     </div>
+
                 </div>
+
+                <div id="allDatabaseFromForm"></div>
+
             </div>
         </div>
     </main>
@@ -386,6 +393,5 @@
         </div>
     </footer>
 
-    <script src="./scripts.js"></script>
 </body>
 </html>
